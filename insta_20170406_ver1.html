@@ -1,0 +1,45 @@
+
+<http>
+    <head></head>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <body>
+    
+        <script type="text/javascript">
+    (function($) {  
+        var token = "4949494352.efb0aa9.439a11554c1d474d8eab35427fe4ba7a"; /**/  
+
+        //var token = "1926169907.f23e151.3f8fe79a69e64681a76e21efa8ff1bdf"  /*OJH*/
+        //var token = "1664384641.aad3dde.372c1470ffc24661a1001030070c3490"  /*OHN*/
+
+        var tmpUrl = "https://api.instagram.com/v1/tags/test?"; // 0
+        //var tmpUrl = "https://api.instagram.com/v1/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/media/recent?" // 0
+        //var tmpUrl = "https://api.instagram.com/v1/users/self/?"; // 0
+        //var tmpUrl = "https://api.instagram.com/v1/users/4949494352/?";           // 0 user id = 4949494352 내꺼
+        //var tmpUrl = "https://api.instagram.com/v1/users/self/media/liked?";      // 0 내가 좋아하길 누른 것
+
+        //var tmpUrl = "https://api.instagram.com/v1/users/search?q=hana.oh.0614&";     // 좀더 테스트 필요 
+
+        //var tmpUrl = "https://api.instagram.com/v1/users/self/follows?";
+        //var tmpUrl = "https://api.instagram.com/v1/users/hana.oh.0614/relationship?";
+        
+        //var tmpUrl = "https://api.instagram.com/v1/users/'ts__kim'/relationship?"
+        
+        
+        var tokenStr = "access_token=" + token;
+        var count = "6";  
+        $.ajax({  
+            type: "GET",  
+            dataType: "jsonp",  
+            cache: false,  
+            url: tmpUrl+tokenStr,  
+            success: function(result) {  
+                console.dir(result);
+            }  
+           });  
+   }(jQuery));  
+
+        </script>       
+    </body>
+</http>
+
+
